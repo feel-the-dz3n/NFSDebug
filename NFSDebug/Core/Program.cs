@@ -1,7 +1,8 @@
-﻿using System;
+﻿using NFSDebug.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Forms;
+using System.Windows;
 
 namespace NFSDebug
 {
@@ -13,9 +14,7 @@ namespace NFSDebug
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            new MainWindow().ShowDialog();
         }
     }
 }
