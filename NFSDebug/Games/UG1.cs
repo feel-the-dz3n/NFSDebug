@@ -9,10 +9,6 @@ namespace NFSDebug.Games
     public class UG1 : BlackBoxGame
     {
         public UG1(System.Diagnostics.Process p)
-        {
-            GameName = "Need for Speed: Underground (Black Box)";
-            ExecutableName = "speed.exe";
-            Mem = new Binarysharp.MemoryManagement.MemorySharp(p);
-        }
+              => SetGame("Need for Speed: Underground (Black Box)", "speed.exe", p);
     }
 }

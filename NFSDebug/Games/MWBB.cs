@@ -12,10 +12,6 @@ namespace NFSDebug.Games
     public class MWBB : BlackBoxGame
     {
         public MWBB(System.Diagnostics.Process p)
-        {
-            GameName = "Need for Speed: Most Wanted (Black Box, 2005)";
-            ExecutableName = "speed.exe";
-            Mem = new Binarysharp.MemoryManagement.MemorySharp(p);
-        }
+               => SetGame("Need for Speed: Most Wanted (Black Box, 2005)", "speed.exe", p);
     }
 }

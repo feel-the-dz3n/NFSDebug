@@ -1,5 +1,7 @@
-﻿using System;
+﻿using NFSDebug.Games;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,16 @@ namespace NFSDebug.UI
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (var p in Process.GetProcesses())
+            {
+                foreach (var g in Global.BlackboxGames)
+                    if (p.ProcessName.ToLower().Contains(g.ExecutableName))
+                        lbProcesses.Items.Add(new BBProcess(p, g));
+            }
         }
     }
 }

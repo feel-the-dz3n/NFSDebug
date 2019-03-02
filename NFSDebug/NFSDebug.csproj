@@ -91,6 +91,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -106,10 +107,14 @@
     <Compile Include="Games\Addresses.cs" />
     <Compile Include="Games\BlackBoxGame.cs" />
     <Compile Include="Games\Carbon.cs" />
+    <Compile Include="Games\Global.cs" />
     <Compile Include="Games\MWBB.cs" />
     <Compile Include="Games\UG1.cs" />
     <Compile Include="Games\UG2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BBProcess.xaml.cs">
+      <DependentUpon>BBProcess.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -141,6 +146,10 @@
     <Content Include="Resources\NFS Debug Icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="UI\BBProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UI\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
