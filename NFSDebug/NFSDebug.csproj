@@ -107,6 +107,7 @@
     <Compile Include="Games\Addresses.cs" />
     <Compile Include="Games\BlackBoxGame.cs" />
     <Compile Include="Games\Carbon.cs" />
+    <Compile Include="Games\GameMethod.cs" />
     <Compile Include="Games\Global.cs" />
     <Compile Include="Games\MWBB.cs" />
     <Compile Include="Games\UG1.cs" />
@@ -114,6 +115,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\BBProcess.xaml.cs">
       <DependentUpon>BBProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GameControl.xaml.cs">
+      <DependentUpon>GameControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -147,6 +151,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="UI\BBProcess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\GameControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

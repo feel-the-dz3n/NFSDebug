@@ -22,6 +22,16 @@ namespace NFSDebug.UI
         public MainWindow()
         {
             InitializeComponent();
+            foreach (var g in Global.BlackboxGames)
+            {
+                var m = g.Functions;
+                StringBuilder a = new StringBuilder();
+                foreach(var f in m)
+                {
+                    a.AppendLine(f.FriendlyName);
+                }
+                MessageBox.Show(a.ToString(), g.GameName);
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

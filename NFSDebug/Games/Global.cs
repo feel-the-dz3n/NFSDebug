@@ -16,5 +16,27 @@ namespace NFSDebug.Games
             new Carbon(null)
             // undercover
         };
+
+        public static string GetFriendlyName(string initial, string source)
+        {
+            StringBuilder a = new StringBuilder();
+
+            source = source.Remove(0, initial.Length);
+
+            for(int i = 0; i < source.Length; i++)
+            {
+                var c = source[i];
+
+                if (i != 0 && char.IsUpper(c))
+                    a.Append(' ');
+
+                if (c == '_')
+                    c = ' ';
+
+                a.Append(c);
+            }
+
+            return a.ToString();
+        }
     }
 }

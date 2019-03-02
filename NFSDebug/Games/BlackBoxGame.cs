@@ -13,6 +13,20 @@ namespace NFSDebug.Games
         public string ExecutableName = "nfs";
         public MemorySharp Mem = null;
 
+        public List<GameMethod> Functions
+        {
+            get
+            {
+                List<GameMethod> result = new List<GameMethod>();
+
+                foreach (var m in this.GetType().GetMethods())
+                    if (m.Name.StartsWith("Func"))
+                        result.Add(new GameMethod(m));
+
+                return result;
+            }
+        }
+
         // public BlackBoxGame() => throw new NotSupportedException();
 
         public void SetGame(string name, string exe, System.Diagnostics.Process p)
@@ -31,12 +45,17 @@ namespace NFSDebug.Games
                 Mem = null;
         }
 
-        public void GoFreeroam()
+        public void FuncGoFreeroam()
         {
             if (this is MWBB)
                 Mem[(IntPtr)0x56C5B0, false].Execute();
             else
                 throw new NotImplementedException($"Address for game '{GameName}' is not found");
+        }
+
+        public void FuncTe_stFunctionIsSuper()
+        {
+            
         }
 
         public void Dispose()
