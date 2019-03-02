@@ -2,9 +2,7 @@
 
 ## NFS Debug
 
-Powered by [MemoryToolkit](https://github.com/feel-the-dz3n/MemoryToolkit)
-
-Powered by [cmd♯](https://github.com/feel-the-dz3n/CmdSharp)
+Powered by [MemorySharp](https://github.com/ZenLulz/MemorySharp)
 
 Copyright © Dz3n 2019
 
