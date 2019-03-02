@@ -18,9 +18,7 @@ namespace NFSDebug.Games
         public void GoFreeroam()
         {
             if (this is MWBB)
-                Mem[(IntPtr)0xFFFFFFFF].Execute();
-            else if (this is Carbon)
-                Mem[(IntPtr)0xFFFFFFFF].Execute();
+                Mem[(IntPtr)0x56C5B0, false].Execute();
             else
                 throw new NotImplementedException($"Address for game '{GameName}' is not found");
         }
